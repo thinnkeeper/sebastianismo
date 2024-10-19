@@ -38,3 +38,8 @@ body {
     all: unset;
     caret-color: transparent;
 }
+.firstinput {
+    border-color: rgb(97, 97, 97);
+    background-color: rgb(15, 14, 15);
+    color: bisque;
+}

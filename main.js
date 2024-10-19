@@ -1,31 +1,29 @@
 function check_key(event){
-    //tentativa de focar no input field apos load da página NAO FUNCIONA
-    //document.getElementById("input_field").focus();
     let key = event.key;
     if (key === "Enter") {
-        let val = document.getElementById("input_field").value;
-        if (val === "help" || val === "h") {
+        let val = document.getElementById("input_field").value.toUpperCase();
+        if (val === "HELP" || val === "H") {
             remove_bi();
             add_help();
             add_bi();
             remove_id("rep");
             remove_id("help");
         }
-        else if(val === "about" || val === "abt"){
+        else if(val === "ABOUT" || val === "ABT"){
             remove_bi();
             add_about();
             add_bi();
             remove_id("rep");
             remove_id("about");
         }
-        else if(val === "academic" || val === "acad"){
+        else if(val === "ACADEMIC" || val === "ACAD"){
             remove_bi();
             add_academic();
             add_bi();
             remove_id("rep");
             remove_id("academic");
         }
-        else if(val === "clear" || val === "c"){
+        else if(val === "CLEAR" || val === "C"){
             clear();
             add_bi();
         }
