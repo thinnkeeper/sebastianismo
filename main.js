@@ -16,12 +16,19 @@ function check_key(event){
             remove_id("rep");
             remove_id("about");
         }
-        else if(val === "ACADEMIC" || val === "ACAD"){
+        else if(val === "ACADEMIC" || val === "ACD"){
             remove_bi();
             add_academic();
             add_bi();
             remove_id("rep");
             remove_id("academic");
+        }
+        else if(val === "CONTACTS" || val === "CTS"){
+            remove_bi();
+            add_contacts();
+            add_bi();
+            remove_id("rep");
+            remove_id("contacts");
         }
         else if(val === "CLEAR" || val === "C"){
             clear();
@@ -76,6 +83,13 @@ function add_academic(){
     box.appendChild(newElement);
     document.getElementById("academic").innerHTML = create_academic();
     getSection("html/academic.html", "academic");
+}
+
+function add_contacts(){
+    let box = document.querySelector(".box");
+    let newElement = document.createElement("p");
+    newElement.setAttribute("id", "contacts");
+    box.appendChild(newElement);
 }
 
 function remove_bi(){
