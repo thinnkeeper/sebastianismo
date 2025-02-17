@@ -23,6 +23,13 @@ function check_key(event){
             remove_id("rep");
             remove_id("academic");
         }
+        else if(val === "PROJECTS" || val === "PRT"){
+            remove_blink_input();
+            add_projects();
+            add_blink_input();
+            remove_id("rep");
+            remove_id("projects");
+        }
         else if(val === "CONTACTS" || val === "CTS"){
             remove_blink_input();
             add_contacts();
@@ -76,20 +83,20 @@ function add_projects(){
     let box = document.querySelector(".box");
     let newElement = document.createElement("p");
     newElement.setAttribute("id", "projects");
+    box.appendChild(newElement);
     let create_projects = '...<span class="neon_green">Under Construction</span>...<br>';
     document.getElementById("projects").innerHTML = create_projects;
-    box.appendChild(newElement);
 }
 
 function add_contacts(){
     let box = document.querySelector(".box");
     let newElement = document.createElement("p");
     newElement.setAttribute("id", "contacts");
-    let create_contacts = '<span class="neon_green">Email</span>: scsmonteiro.work@gmail.com<br>';
-    create_contacts += '<span class="neon_green">LinkedIn</span>: <a href="www.linkedin.com/in/sebastião-monteiro-b37a0821a">sebastião-monteiro-b37a0821a</a>';
-    create_contacts += '<span class="neon_green">GitHub</span>: <a href="https://github.com/thinnkeeper">thinnkeeper</a>';
-    document.getElementById("contacts").innerHTML = create_contacts;
     box.appendChild(newElement);
+    let create_contacts = '|<br>└&gt; <span class="neon_green">Email</span>: scsmonteiro.work@gmail.com<br>';
+    create_contacts += '└&gt; <span class="neon_green">LinkedIn</span>: <span class="neon_purple"><a href="https://www.linkedin.com/in/sebastianismo" target="_blank" rel="noopener noreferrer">Sebastião Monteiro</a></span><br>';
+    create_contacts += '└&gt; <span class="neon_green">GitHub</span>: <span class="neon_purple"><a href="https://github.com/thinnkeeper" target="_blank" rel="noopener noreferrer">thinnkeeper</a></span>';
+    document.getElementById("contacts").innerHTML = create_contacts;
 }
 
 function remove_blink_input(){
