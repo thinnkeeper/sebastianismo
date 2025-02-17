@@ -1,48 +1,114 @@
+:root {
+    --bg-color: rgb(15, 14, 15);
+    --font-family: 'Courier New', Courier, monospace;
+    --text-color: bisque;
+    --link-color: #fff;
+    --border-color: rgb(97, 97, 97);
+    --neon-green: #0fa;
+    --neon-purple: #c300ff;
+    --white: #fff;
+}
+
 body {
-    background-color: rgb(15, 14, 15);
-    font-family: 'Courier New', Courier, monospace;
-    color: bisque;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
     overflow: hidden;
 }
+
 a {
-    color: #fff;
+    color: var(--link-color);
 }
+
 .neon_green {
-    color: #fff;
+    color: var(--link-color);
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #0fa,
-        0 0 21px #0fa,
-        0 0 42px #0fa;
+        0 0 7px var(--white),
+        0 0 10px var(--neon-green),
+        0 0 21px var(--neon-green),
+        0 0 42px var(--neon-green);
 }
+
 .neon_purple {
-    color: #fff;
+    color: var(--link-color);
     text-shadow:
-        0 0 7px #fff,
-        0 0 10px #c300ff,
-        0 0 21px #c300ff,
-        0 0 42px #c300ff;
+        0 0 7px var(--white),
+        0 0 10px var(--neon-purple),
+        0 0 21px var(--neon-purple),
+        0 0 42px var(--neon-purple);
 }
+
 #blink {
     animation: blink-animation 1s steps(5, start) infinite;
     -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
+
 @keyframes blink-animation {
     to {
         visibility: hidden;
     }
 }
+
 @-webkit-keyframes blink-animation {
     to {
         visibility: hidden;
     }
 }
+
 .all_unset {
     all: unset;
     caret-color: transparent;
 }
+
 .firstinput {
-    border-color: rgb(97, 97, 97);
-    background-color: rgb(15, 14, 15);
-    color: bisque;
+    border-color: var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.command-buttons {
+    display: none; /* Hide by default on larger screens */
+}
+
+/* Responsive styles for devices with a max-width of 600px */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        overflow: auto;
+    }
+    .box {
+        width: 90%;
+
+    }
+    #input_field {
+        width: 90%;
+        font-size: 16px;
+        padding: 8px;
+    }
+    pre {
+        font-size: 8px;
+        white-space: pre-wrap; /* Ensure ASCII art wraps or adjust as needed */
+    }
+    .command-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px auto;
+        padding: 5px;
+        background-color: var(--bg-color);
+    }
+    .command-buttons button {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin: 5px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        cursor: pointer;
+        font-family: var(--font-family);
+    }
+    .command-buttons button:hover {
+        background-color: var(--link-color);
+        color: var(--bg-color);
+    }
 }

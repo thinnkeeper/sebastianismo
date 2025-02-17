@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(15, 14, 15);
+    font-family: 'Courier New', Courier, monospace;
+    color: bisque;
+    overflow: hidden;
+}
+a {
+    color: #fff;
+}
+.neon_green {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #0fa,
+        0 0 21px #0fa,
+        0 0 42px #0fa;
+}
+.neon_purple {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #c300ff,
+        0 0 21px #c300ff,
+        0 0 42px #c300ff;
+}
+#blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+.all_unset {
+    all: unset;
+    caret-color: transparent;
+}
+.firstinput {
+    border-color: rgb(97, 97, 97);
+    background-color: rgb(15, 14, 15);
+    color: bisque;
+}
