@@ -3,40 +3,40 @@ function check_key(event){
     if (key === "Enter") {
         let val = document.getElementById("input_field").value.toUpperCase();
         if (val === "HELP" || val === "H") {
-            remove_bi();
+            remove_blink_input();
             add_help();
-            add_bi();
+            add_blink_input();
             remove_id("rep");
             remove_id("help");
         }
         else if(val === "ABOUT" || val === "ABT"){
-            remove_bi();
+            remove_blink_input();
             add_about();
-            add_bi();
+            add_blink_input();
             remove_id("rep");
             remove_id("about");
         }
         else if(val === "ACADEMIC" || val === "ACD"){
-            remove_bi();
+            remove_blink_input();
             add_academic();
-            add_bi();
+            add_blink_input();
             remove_id("rep");
             remove_id("academic");
         }
         else if(val === "CONTACTS" || val === "CTS"){
-            remove_bi();
+            remove_blink_input();
             add_contacts();
-            add_bi();
+            add_blink_input();
             remove_id("rep");
             remove_id("contacts");
         }
         else if(val === "CLEAR" || val === "C"){
             clear();
-            add_bi();
+            add_blink_input();
         }
         else {
-            remove_bi();
-            add_bi();
+            remove_blink_input();
+            add_blink_input();
             document.getElementById("rep").innerHTML += '&emsp;&emsp;&emsp;<span class="neon_purple"><-- Invalid command.</span>';
             remove_id("rep");
         }
@@ -82,7 +82,6 @@ function add_academic(){
     newElement.setAttribute("id", "academic");
     box.appendChild(newElement);
     document.getElementById("academic").innerHTML = create_academic();
-    getSection("html/academic.html", "academic");
 }
 
 function add_contacts(){
@@ -92,7 +91,7 @@ function add_contacts(){
     box.appendChild(newElement);
 }
 
-function remove_bi(){
+function remove_blink_input(){
     const blink = document.getElementById("blink");
     const input_field = document.getElementById("input_field");
     add_replacement_input(input_field.value);
@@ -100,7 +99,7 @@ function remove_bi(){
     input_field.remove();
 }
 
-function add_bi(){
+function add_blink_input(){
     let blink = ">";
     let box = document.querySelector(".box");
     let newBlink = document.createElement("span");
@@ -133,22 +132,4 @@ function remove_id(id){
 function clear() {
     let box = document.querySelector(".box");
     box.innerHTML = '';
-}
-
-function getSection(path, section) {
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch(path)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById(section).innerHTML = data;
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-    });
 }
