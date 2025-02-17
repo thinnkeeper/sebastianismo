@@ -72,10 +72,23 @@ function add_academic(){
     document.getElementById("academic").innerHTML = create_academic;
 }
 
+function add_projects(){
+    let box = document.querySelector(".box");
+    let newElement = document.createElement("p");
+    newElement.setAttribute("id", "projects");
+    let create_projects = '...<span class="neon_green">Under Construction</span>...<br>';
+    document.getElementById("projects").innerHTML = create_projects;
+    box.appendChild(newElement);
+}
+
 function add_contacts(){
     let box = document.querySelector(".box");
     let newElement = document.createElement("p");
     newElement.setAttribute("id", "contacts");
+    let create_contacts = '<span class="neon_green">Email</span>: scsmonteiro.work@gmail.com<br>';
+    create_contacts += '<span class="neon_green">LinkedIn</span>: <a href="www.linkedin.com/in/sebastião-monteiro-b37a0821a">sebastião-monteiro-b37a0821a</a>';
+    create_contacts += '<span class="neon_green">GitHub</span>: <a href="https://github.com/thinnkeeper">thinnkeeper</a>';
+    document.getElementById("contacts").innerHTML = create_contacts;
     box.appendChild(newElement);
 }
 
