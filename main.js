@@ -1,10 +1,9 @@
 // Wait for the DOM to load before attaching event listeners
 document.addEventListener("DOMContentLoaded", () => {
-    // Existing code: attach the keydown event listener to the input field
     const inputField = document.getElementById("input_field");
     inputField.addEventListener("keydown", checkKey);
   
-    // NEW: Attach event listeners to the command buttons (visible on small screens)
+    // Attach event listeners to the command buttons (visible on small screens)
     const commandButtons = document.querySelectorAll(".command-buttons button");
     commandButtons.forEach(button => {
       button.addEventListener("click", () => {
@@ -51,9 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleCommand(cmd) {
     switch(cmd) {
-      case "HELP":
-        processCommand("help", getHelpContent());
-        break;
       case "ABOUT":
         processCommand("about", getAboutContent());
         break;
