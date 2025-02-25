@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function getAcademicContent() {
     return `
-      <span class="neon_green">Licenciatura em Informática e Multimédia</span>: 10/2024<br>
+      <span class="neon_green">Licenciatura em Informática e Multimédia</span>: 09/2020 - Today<br>
       ├─ Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia<br>
       └─ <a href="http://www.ipcb.pt" target="_blank" rel="noopener noreferrer">ipcb.pt</a><br>
       <span class="neon_green">Coursera Certificates</span>: 08/2021<br>

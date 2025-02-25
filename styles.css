@@ -86,8 +86,11 @@ a {
     #input_field {
         display: none;
     }
+    #rep {
+        display: none;
+    }
     pre {
-        font-size: 6px;
+        font-size: 4px;
         white-space: pre-wrap; /* Ensure ASCII art wraps or adjust as needed */
     }
     .command-buttons {
