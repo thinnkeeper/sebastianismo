@@ -73,20 +73,21 @@ a {
 /* Responsive styles for devices with a max-width of 600px */
 @media only screen and (max-width: 600px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
         overflow: auto;
     }
     .box {
         width: 90%;
 
     }
+    #blink {
+        display: none;
+    }
     #input_field {
-        width: 90%;
-        font-size: 16px;
-        padding: 8px;
+        display: none;
     }
     pre {
-        font-size: 8px;
+        font-size: 6px;
         white-space: pre-wrap; /* Ensure ASCII art wraps or adjust as needed */
     }
     .command-buttons {
