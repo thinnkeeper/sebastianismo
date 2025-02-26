@@ -90,7 +90,7 @@ a {
         display: none;
     }
     pre {
-        font-size: 4px;
+        font-size: 5px;
         white-space: pre-wrap; /* Ensure ASCII art wraps or adjust as needed */
     }
     .command-buttons {
@@ -102,7 +102,7 @@ a {
         background-color: var(--bg-color);
     }
     .command-buttons button {
-        padding: 10px 15px;
+        padding: 10px 10px;
         font-size: 16px;
         margin: 5px;
         border: 1px solid var(--border-color);
@@ -110,6 +110,7 @@ a {
         color: var(--text-color);
         cursor: pointer;
         font-family: var(--font-family);
+        border-radius: 5px;
     }
     .command-buttons button:hover {
         background-color: var(--link-color);
